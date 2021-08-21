@@ -51,7 +51,7 @@ pipeline {
 		        continueOnError: false,
 		        publishers: [ 
 	                    sshPublishDesc(
-	                        configname: 'staging',
+	                        configname: 'prodpi',
 			        sshCredentials: [
 			            username: "$USERNAME",
 			            encryptedPassphrase: "$USERPASS"
