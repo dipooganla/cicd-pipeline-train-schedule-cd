@@ -16,7 +16,7 @@ pipeline {
 	        branch 'master'
 	    }
 	    steps {
-	        withCredentials([usernamePassword(credentialsid: 'webserver_login', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
+	        withCredentials([usernamePassword(credentialsId: 'webserver_login', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
 	            sshPublisher(
 		        failOnError: true,
 		        continueOnError: false,
@@ -48,7 +48,7 @@ pipeline {
 	    steps {
 		input 'Does the staging environment look OK?'
 		milestone(1)
-	        withCredentials([usernamePassword(credentialsid: 'webserver_login', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
+	        withCredentials([usernamePassword(credentialsId: 'webserver_login', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
 	            sshPublisher(
 		        failOnError: true,
 		        continueOnError: false,
