@@ -21,8 +21,8 @@ pipeline {
 	                    sshPublisherDesc(
 	                        configName: 'stagingpi',
 			        sshCredentials: [
-			            username: "$USERNAME",
-			            encryptedPassphrase: "$USERPASS"
+			            username: '$USERNAME',
+			            encryptedPassphrase: '$USERPASS'
 			        ],
 			        transfers: [
 			            sshTransfer(
@@ -53,8 +53,8 @@ pipeline {
 	                    sshPublisherDesc(
 	                        configName: 'prodpi',
 			        sshCredentials: [
-			            username: "$USERNAME",
-			            encryptedPassphrase: "$USERPASS"
+			            username: '$USERNAME',
+			            encryptedPassphrase: '$USERPASS'
 			        ],
 			        transfers: [
 			            sshTransfer(
