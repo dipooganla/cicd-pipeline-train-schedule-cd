@@ -20,7 +20,7 @@ pipeline {
 		        publishers: [ 
 	                    sshPublisherDesc(
 	                        configName: 'stagingpi',
-				verbose: true
+				verbose: true,
 			        sshCredentials: [
 			            username: "$USERNAME",
 			            encryptedPassphrase: "$USERPASS"
@@ -53,7 +53,7 @@ pipeline {
 		        publishers: [ 
 	                    sshPublisherDesc(
 	                        configName: 'prodpi',
-				verbose: true
+				verbose: true,
 			        sshCredentials: [
 			            username: "$USERNAME",
 			            encryptedPassphrase: "$USERPASS"
