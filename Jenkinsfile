@@ -30,7 +30,7 @@ pipeline {
 				        sourceFiles:'dist/trainSchedule.zip',
 				        removePrefix: 'dist/',
 				        remoteDirectory: '/tmp',
-				        execCommand: 'sudo /usr/bin/systemctl stop train-schedule.service && mkdir /opt/trainschedule && chown deploy:deploy && unzip /tmp/trainSchedule.zip -d /opt/train-schedule && sudo /usr/bin/systemctl start train-schedule.service'
+				        execCommand: 'sudo /usr/bin/systemctl stop train-schedule.service && sudo mkdir /opt/train-schedule && sudo chown deploy:deploy && unzip /tmp/trainSchedule.zip -d /opt/train-schedule && sudo /usr/bin/systemctl start train-schedule.service'
 				    )
 			        ]
 			    )
