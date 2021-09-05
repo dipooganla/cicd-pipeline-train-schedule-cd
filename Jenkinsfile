@@ -19,7 +19,7 @@ pipeline {
 		        continueOnError: false,
 		        publishers: [ 
 	                    sshPublisherDesc(
-	                        configName: 'stagingpi',
+	                        configName: 'kubeworker-staging',
 				verbose: true,
 			        sshCredentials: [
 			            username: "$USERNAME",
